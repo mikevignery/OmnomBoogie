@@ -1,24 +1,37 @@
-# Omnom Boogie — editorial website concept (revision 2)
+# Omnom Boogie — Website v3
 
-A four-page static site (Home, About, Projects, Contact) for the proposed Omnom Boogie, LLC. No framework, build tooling, accounts, forms, analytics, cookies, or external assets.
+A four-page, responsive static website designed for GitHub Pages. No framework, build step, user accounts, analytics, cookies, or contact form.
 
-## Design direction
-- Distinctive oversized typography, editorial spacing, ink/cream color scheme, and one lively accent.
-- Avoids stock photos, generic gradient blobs, fabricated team information, customer testimonials, and fabricated metrics.
-- Lane Log artwork is **an original CSS placeholder**, not a product screenshot or approved logo. Replace it when the actual images arrive.
-- The compact `o•b` monogram is an interim design device, not a final logo.
+## Pages
+- `index.html` — Home
+- `about.html` — About
+- `projects.html` — Projects
+- `contact.html` — Contact
 
-## Preview
-Run `python3 -m http.server 8000` in this folder and open `http://localhost:8000/` or open `index.html` directly in a browser. Test at mobile widths and review content before publishing.
+## Supporting files
+- `styles.css` — Shared styles, animations, responsive layouts
+- `site.js` — Accessible mobile navigation and live copyright year
+- `assets/favicon.svg` — Temporary graphic favicon; replace after approved logo arrives
 
-## Upload to GitHub
-Create a separate repository and upload these files to the repository root. Nothing in this ZIP has been pushed or deployed.
+## GitHub Pages deployment
+1. Create or open your `omnom-boogie-site` repository.
+2. Upload the **contents** of this folder to the repository root, replacing the previous site files. Keep relative filenames and the `assets/` folder intact.
+3. Open **Settings → Pages**. Under **Build and deployment**, select **Deploy from a branch**, then choose `main` and `/ (root)` and save.
+4. Open the Pages URL GitHub provides after deployment (may take a few minutes).
+5. Check Home, About, Projects, Contact on desktop and mobile.
+
+The site uses relative internal links so it works on GitHub Pages project URLs (e.g. `username.github.io/omnom-boogie-site/`).
 
 ## Before public launch
-1. Confirm the company’s actual registered name and status. The footer intentionally identifies `Omnom Boogie, LLC` as a **proposed** name. Do not imply completed ownership transfer until arrangements are established.
-2. Replace the temporary glyph and Lane Log project art with approved logos/screenshots (and ensure you have permission to use them).
-3. Add a real company email address to Contact.
-4. Finalize privacy disclosure based on actual hosting logs, analytics, contact setup, and visitor jurisdictions; add a policy page if required.
-5. Connect the domain and hosting platform later. No Cloudflare- or Vercel-specific setup is required.
+- Replace the proposed business name language after LLC formation and legal review, if applicable.
+- Add the approved company logo and a real contact method to `contact.html`.
+- Replace decorative Lane Log visuals with approved product screenshots if desired.
+- Review the wording for alignment with your actual business.
+- Fonts currently load from Google Fonts (Space Grotesk and DM Sans); system font fallbacks are provided.
+- No privacy policy or terms page is included in this informational version; revisit if analytics, forms or other data handling are added.
 
-External product links: https://www.mylanelog.com/ and https://www.mylanelog.com/support.
+## Files changed from v2
+Updated: `index.html`, `about.html`, `projects.html`, `contact.html`, `styles.css`, `site.js`, `README.md`
+New: `assets/favicon.svg`
+
+Nothing needs npm, bundling, or a backend.
